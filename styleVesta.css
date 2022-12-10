@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: antiquewhite;
+  }
+  
+  body {
+    display: grid;
+    min-height: 100vh;
+    justify-content: end;
+    align-content: end;
+    font-family: "Open Sans", sans serif;
+    min-width: 320px;
+  }
+  
+  .navbar {
+    border: 2px solid rgb(9, 63, 143);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+    background-color: rgb(9, 63, 143);
+    color:antiquewhite;
+  }
+  .navbar li{
+    list-style: none;
+  }
+
+  .navbar a{
+    text-decoration: none;
+  }
+  .nav-links a{
+    color:antiquewhite;
+  }
+  
+  
+  .menu{
+    display: flex;
+    font-size: 18px;
+
+  }
+
+  .menu li{
+    padding: 5px 15px;
+  }
+  .menu li a:hover{
+    transition: all .10s;
+    color:grey;
+  }
+  
+  #checkbox_t{
+    display: none;
+  }
+  
+  .hamburger{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .hamburger-line{
+    background-color:rgb(48, 48, 48);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+  }
+  .hamburger-line::before, 
+  .hamburger-line::after{
+    background-color: rgb(48, 48, 48);
+    content:'' ;
+    display: block;
+    position: absolute;
+    transition: all .3s;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hamburger-line::before{
+    top: 7px;
+  }
+
+  .hamburger-line::after{
+    top:-7px;
+}
+
+main{
+  background-color:black;
+}
+.centre{
+  margin-top: 4%;
+  text-align: center;
+  font-size: 32px;
+  
+}
+.text{
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 22px;
+  margin-bottom: 3%;
+}
+.param{
+  margin-left: 5%;
+}
+.text p{
+  margin-top: 3%;
+}
+.cont{
+  margin-bottom: 5%;
+}
+.main_img{
+  justify-content: center;
+  overflow: hidden;
+  max-width: 70%;
+  max-height: 50%;
+  margin-top: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+@media(max-width:768px) {
+    .menu {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        background-color: rgb(9, 63, 143);
+        text-align: center;
+        right: 0;
+        left: 0;
+        border-width: 2px 0px 0px 0px;
+        border-color: black;
+        border-style: solid;
+        margin-top: 29px;
+        transition: 1s;
+    }
+    .menu li{
+      transition: all .5s;
+    }
+    .menu li:hover{
+      background-color: rgb(9, 63, 143) ;
+    }
+    #checkbox_t:checked ~.menu{
+        display: block;
+        z-index: 10;
+        max-height: 100%;
+        transition: all 5.5s;
+    }
+    .hamburger{
+        display: block;
+        padding: 20px 0;
+      }
+    #checkbox_t:checked ~ .hamburger .hamburger-line{
+        background-color: transparent;
+    }
+    #checkbox_t:checked ~ .hamburger .hamburger-line::before{
+      transform: rotate(-45deg);
+      top:0;
+    }
+    #checkbox_t:checked ~ .hamburger .hamburger-line::after{
+      transform: rotate(45deg);
+      top:0;
+    }
+    .text{
+      margin-left: 5%;
+      margin-right: 5%;
+      font-size: 18px;
+      margin-bottom: 3%;
+    }
+    .param{
+      margin-left: 3%;
+    }
+    .text p{
+      margin-top: 5%;
+    }
+  }
+
+
+  
+footer{
+    font-size: larger;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 25px 50px;
+    background-color: rgb(9, 63, 143);
+    color: white;
+}
+footer a{
+    color: rgb(255, 255, 255);
+}
+
+footer .footer{
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'b1 b2 b3';
+    grid-gap: 20px;
+}
+
+.footer block1{
+    grid-area: b1;
+}
+
+.footer block2{
+    grid-area: b2;
+}
+
+.footer block3{
+    grid-area: b3;
+}
+
+.block{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.foot li{
+    list-style: none;
+}
+.foot li a{
+    text-decoration: none;
+    transition: all 12.s;
+    -webkit-transition: all 1s 0.1s ease-in;
+    cursor: pointer;
+}
+.foot li a:hover{
+
+    color: rgb(255, 21, 0);
+}
+
+  @media (max-width: 680px) {
+
+    footer{
+      padding-top: 4%;
+      padding-bottom: 4%;
+    }
+footer .footer {
+      grid-template-areas:
+      'b1'
+      'b2'
+      'b3';
+      font-size: 18px;
+    }
+
+    .text{
+      margin-left: 5%;
+      margin-right: 5%;
+      font-size: 18px;
+      margin-bottom: 3%;
+    }
+    .param{
+      margin-left: 3%;
+    }
+    .text p{
+      margin-top: 5%;
+    }
+  }
+  
+  
